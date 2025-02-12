@@ -190,7 +190,6 @@ export function purchaseArmor(nextArmor) {
     elements.text.innerText = `You bought ${nextArmor.name} for ${nextArmor.price} gold.\n`;
     elements.text.innerText += nextArmor.description;
 
-    // actualizar el texto de la armadura
     elements.armorText.innerText = armors[state.armor].defense;
 
     // actualizar al momento las opciones de compra

@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { updateLocationsList, goTown } from "./locations.js";
+import { updateUI as updateUIUtil } from "./utils.js";
 
 // estado del juego
 export let state = {
@@ -279,10 +280,7 @@ export function loadGame() {
 
 // actualización de UI
 export function updateUI() {
-  elements.xpText.innerText = state.xp;
-  elements.healthText.innerText = state.health;
-  elements.goldText.innerText = state.gold;
-  elements.armorText.innerText = armors[state.armor].defense;
+  updateUIUtil(elements, state);
 }
 
 export function restart() {

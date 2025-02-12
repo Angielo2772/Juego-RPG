@@ -1,4 +1,6 @@
 // @ts-nocheck
+// funciones para un futuro
+/*
 import { elements } from "./gameState.js";
 
 export function setupButton(button, text, onClick, display = true) {
@@ -28,3 +30,4 @@ export function enableButtons() {
     .filter((el) => el.tagName === "BUTTON")
     .forEach((button) => (button.disabled = false));
 }
+*/

@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (authData) {
         loggedUsername.textContent = authData.record.username;
         showGame();
-        console.log("Login exitoso:", authData);
+        console.log("Successful Login:", authData);
       }
     } catch (error) {
-      console.error("Error login:", error);
+      console.error("Login Error:", error);
       errorMessage.textContent = error.message;
       errorMessage.style.color = "#ff6b6b";
     }
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       await registerUser(username, email, password);
       errorMessage.textContent =
-        "¡Registro exitoso! Ahora puedes iniciar sesión.";
+        "Successful registration! Now you can log in.";
       errorMessage.style.color = "#90EE90";
     } catch (error) {
       errorMessage.textContent = error.message;
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function handleGuestLogin() {
-    const guestUsername = "Invitado_" + Math.random().toString(36).substr(2, 9);
+    const guestUsername = "Guest_" + Math.random().toString(36).substr(2, 9);
     loggedUsername.textContent = guestUsername;
     showGame();
   }

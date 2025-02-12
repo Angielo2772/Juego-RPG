@@ -11,6 +11,7 @@ import {
   updateUI,
 } from "./gameState.js";
 import { updateLocationsList, update, locations } from "./locations.js";
+import { showMessage } from "./utils.js";
 
 export function attack() {
   const monsterDamage = calculateMonsterDamage();
@@ -18,7 +19,7 @@ export function attack() {
 
   updateCombatState(monsterDamage, playerDamage);
 
-  if (state.health <= 0) { 
+  if (state.health <= 0) {
     lose();
     return;
   }
@@ -68,23 +69,25 @@ function updateCombatState(monsterDamage, playerDamage) {
 }
 
 function updateCombatUI(playerDamage, monsterDamage) {
+  let message = "";
   if (isMonsterHit()) {
-    elements.text.innerText = `You hit the ${
+    message = `You hit the ${
       monsters[state.fighting].name
-    } for ${playerDamage} damage.`;
-    elements.text.innerText += `\nThe monster deals ${monsterDamage} damage.`;
+    } for ${playerDamage} damage.\nThe monster deals ${monsterDamage} damage.`;
   } else {
-    elements.text.innerText = "You miss!";
-    elements.text.innerText += `\nThe monster deals ${monsterDamage} damage.`;
+    message = `You miss!\nThe monster deals ${monsterDamage} damage.`;
   }
 
+  showMessage(elements.text, message);
   elements.healthText.innerText = state.health;
   elements.monsterHealthText.innerText = state.monsterHealth;
 }
 
 export function dodge() {
-  elements.text.innerText =
-    "You dodge the attack from the " + monsters[state.fighting].name;
+  showMessage(
+    elements.text,
+    "You dodge the attack from the " + monsters[state.fighting].name
+  );
 }
 
 export function getMonsterAttackValue(level) {
@@ -103,12 +106,18 @@ export function defeatMonster() {
   state.gold += goldGained;
   state.xp += xpGained;
 
+  state.fighting = null;
+  state.monsterHealth = 0;
+
   elements.goldText.innerText = state.gold;
   elements.xpText.innerText = state.xp;
-  elements.text.innerText = `¡Has derrotado al ${monster.name}!\nGanaste ${goldGained} de oro y ${xpGained} XP.`;
+  showMessage(
+    elements.text,
+    `You defeated the ${monster.name}!\nYou earned ${goldGained} gold and ${xpGained} XP.`
+  );
 
   elements.monsterStats.style.display = "none";
-  
+
   updateLocationsList();
   update(locations[4]);
   saveGame();

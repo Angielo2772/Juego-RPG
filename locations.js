@@ -18,6 +18,7 @@ import {
   viewCurrentArmor,
 } from "./shop.js";
 import { attack, dodge, goFight, lose } from "./combat.js";
+import { setupButton } from "./utils.js";
 
 export const locations = [
   {
@@ -202,26 +203,32 @@ export function update(location) {
 function setupButtons(location) {
   // configurar botones principales
   for (let i = 0; i < 3; i++) {
-    elements[`button${i + 1}`].innerText = location["button text"][i];
-    elements[`button${i + 1}`].onclick = location["button functions"][i];
+    setupButton(
+      elements[`button${i + 1}`],
+      location["button text"][i],
+      location["button functions"][i]
+    );
   }
 
   // configurar botones adicionales
-  setupAdditionalButton(elements.button4, location, 3);
-  setupAdditionalButton(elements.button5, location, 4);
-}
-
-function setupAdditionalButton(button, location, index) {
-  if (location["button text"][index]) {
-    button.style.display = "inline-block";
-    button.innerText = location["button text"][index];
-    button.onclick = location["button functions"][index];
-  } else {
-    button.style.display = "none";
-  }
+  setupButton(
+    elements.button4,
+    location["button text"][3],
+    location["button functions"][3],
+    !!location["button text"][3]
+  );
+  setupButton(
+    elements.button5,
+    location["button text"][4],
+    location["button functions"][4],
+    !!location["button text"][4]
+  );
 }
 
 export function goTown() {
+  state.fighting = null;
+  state.monsterHealth = 0;
+
   elements.monsterStats.style.display = "none";
 
   updateUI();
