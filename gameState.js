@@ -147,77 +147,77 @@ export const monsters = [
   {
     name: "slime",
     level: 5,
-    health: 15,
+    health: 25,
   },
   {
     name: "fanged beast",
-    level: 10,
-    health: 60,
+    level: 15,
+    health: 100,
   },
   {
     name: "dragon",
-    level: 25,
-    health: 300,
+    level: 35,
+    health: 450,
   },
   {
     name: "skeleton warrior",
-    level: 10,
-    health: 120,
-  },
-  {
-    name: "dark wizard",
     level: 20,
     health: 200,
   },
   {
+    name: "dark wizard",
+    level: 30,
+    health: 350,
+  },
+  {
     name: "ancient dragon",
-    level: 35,
-    health: 500,
+    level: 45,
+    health: 700,
   },
   {
     name: "crystal sentinel",
-    level: 20,
-    health: 250,
-  },
-  {
-    name: "gem serpent",
-    level: 30,
-    health: 400,
-  },
-  {
-    name: "prism leviathan",
-    level: 50,
-    health: 700,
-  },
-  {
-    name: "abyss crab",
-    level: 35,
+    level: 40,
     health: 500,
   },
   {
-    name: "shadow eel",
+    name: "gem serpent",
     level: 50,
-    health: 600,
+    health: 800,
+  },
+  {
+    name: "prism leviathan",
+    level: 65,
+    health: 1000,
+  },
+  {
+    name: "abyss crab",
+    level: 55,
+    health: 850,
+  },
+  {
+    name: "shadow eel",
+    level: 70,
+    health: 1100,
   },
   {
     name: "kraken of the deep",
-    level: 70,
-    health: 900,
+    level: 85,
+    health: 1400,
   },
   {
     name: "thunder hawk",
-    level: 50,
-    health: 700,
+    level: 75,
+    health: 1200,
   },
   {
     name: "sky elemental",
-    level: 70,
-    health: 900,
+    level: 90,
+    health: 1600,
   },
   {
     name: "tempest titan",
     level: 100,
-    health: 1200,
+    health: 2000,
   },
 ];
 
@@ -228,11 +228,11 @@ export const locationImages = {
   "dark forest": "./images/places/dark-forest.webp",
   "forgotten hollow": "./images/places/forgotten-hollow.webp",
   "crystal caverns": "./images/places/crystal-caverns.webp",
-  "shimmering abyss": "./images/places/shimmering-abyss.webp",
+  "the shimmering abyss": "./images/places/shimmering-abyss.webp",
   "abyssal depths": "./images/places/abyssal-depths.webp",
-  "sunken trench": "./images/places/sunken-trench.webp",
+  "the sunken trench": "./images/places/sunken-trench.webp",
   "skyward peaks": "./images/places/skyward-peaks.webp",
-  "eye of the storm": "./images/places/eye-of-storm.webp",
+  "the eye of the storm": "./images/places/eye-of-storm.webp",
 };
 
 export const monsterImages = {

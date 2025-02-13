@@ -91,8 +91,8 @@ export function dodge() {
 }
 
 export function getMonsterAttackValue(level) {
-  const hit = level * 3 - Math.floor(Math.random() * state.xp);
-  return hit > 0 ? hit : 0;
+  const hit = level * 4 - Math.floor(Math.random() * (state.xp * 0.7));
+  return hit > 0 ? hit : 1;
 }
 
 export function isMonsterHit() {
@@ -101,7 +101,7 @@ export function isMonsterHit() {
 
 export function defeatMonster() {
   const monster = monsters[state.fighting];
-  const goldGained = Math.floor(monster.level * 6.7);
+  const goldGained = Math.floor(monster.level * 5.5);
   const xpGained = Math.floor(monster.level / 2);
   state.gold += goldGained;
   state.xp += xpGained;

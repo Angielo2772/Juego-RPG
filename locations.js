@@ -162,14 +162,14 @@ export const locations = [
 
 // xp para cada localización
 export const locationRequirements = [
-  { name: "Dark Forest", xp: 100 },
-  { name: "Dragon Mountain", xp: 200 },
-  { name: "Crystal Caverns", xp: 300 },
-  { name: "Shimmering Abyss", xp: 400 },
-  { name: "Abyssal Depths", xp: 500 },
-  { name: "Sunken Trench", xp: 600 },
-  { name: "Skyward Peaks", xp: 700 },
-  { name: "Eye of the Storm", xp: 800 },
+  { name: "Dark Forest", xp: 150 },
+  { name: "Dragon Mountain", xp: 300 },
+  { name: "Crystal Caverns", xp: 500 },
+  { name: "Shimmering Abyss", xp: 700 },
+  { name: "Abyssal Depths", xp: 900 },
+  { name: "Sunken Trench", xp: 1200 },
+  { name: "Skyward Peaks", xp: 1500 },
+  { name: "Eye of the Storm", xp: 2000 },
 ];
 
 // función para actualizar la guia de ubicaciones
@@ -238,35 +238,36 @@ export function goTown() {
 }
 
 function updateButtons() {
-  if (state.xp >= 100) {
+  if (state.xp >= 150) {
+    // actualizar todos los valores aquí también
     elements.button2.innerText = "Go to dark forest";
     elements.button2.onclick = goDarkForest;
   }
-  if (state.xp >= 200) {
+  if (state.xp >= 300) {
     elements.button3.innerText = "Go to dragon mountain";
     elements.button3.onclick = goDragonMountain;
   }
-  if (state.xp >= 300) {
+  if (state.xp >= 500) {
     elements.button2.innerText = "Go to crystal caverns";
     elements.button2.onclick = goCrystalCaverns;
   }
-  if (state.xp >= 400) {
+  if (state.xp >= 700) {
     elements.button3.innerText = "Go to shimmering abyss";
     elements.button3.onclick = goShimmeringAbyss;
   }
-  if (state.xp >= 500) {
+  if (state.xp >= 900) {
     elements.button2.innerText = "Go to abyssal depths";
     elements.button2.onclick = goAbyssalDepths;
   }
-  if (state.xp >= 600) {
+  if (state.xp >= 1200) {
     elements.button3.innerText = "Go to sunken trench";
     elements.button3.onclick = goSunkenTrench;
   }
-  if (state.xp >= 700) {
+  if (state.xp >= 1500) {
     elements.button2.innerText = "Go to skyward peaks";
     elements.button2.onclick = goSkywardPeaks;
   }
-  if (state.xp >= 800) {
+  if (state.xp >= 2000) {
     elements.button3.innerText = "Go to eye of the storm";
     elements.button3.onclick = goEyeOfTheStorm;
   }
