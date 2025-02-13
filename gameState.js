@@ -1,6 +1,5 @@
 // @ts-nocheck
 import { updateLocationsList, goTown } from "./locations.js";
-import { updateUI as updateUIUtil } from "./utils.js";
 
 // estado del juego
 export let state = {
@@ -223,35 +222,35 @@ export const monsters = [
 ];
 
 export const locationImages = {
-  "town square": "./images/places/town-square.jpg",
-  store: "./images/places/store.jpg",
-  cave: "./images/places/cave.jpg",
-  "dark forest": "./images/places/dark-forest.jpg",
-  "forgotten hollow": "./images/places/forgotten-hollow.jpg",
-  "crystal caverns": "./images/places/crystal-caverns.jpg",
-  "shimmering abyss": "./images/places/shimmering-abyss.jpg",
-  "abyssal depths": "./images/places/abyssal-depths.jpg",
-  "sunken trench": "./images/places/sunken-trench.jpg",
-  "skyward peaks": "./images/places/skyward-peaks.jpg",
-  "eye of the storm": "./images/places/eye-of-storm.jpg",
+  "town square": "./images/places/town-square.webp",
+  store: "./images/places/store.webp",
+  cave: "./images/places/cave.webp",
+  "dark forest": "./images/places/dark-forest.webp",
+  "forgotten hollow": "./images/places/forgotten-hollow.webp",
+  "crystal caverns": "./images/places/crystal-caverns.webp",
+  "shimmering abyss": "./images/places/shimmering-abyss.webp",
+  "abyssal depths": "./images/places/abyssal-depths.webp",
+  "sunken trench": "./images/places/sunken-trench.webp",
+  "skyward peaks": "./images/places/skyward-peaks.webp",
+  "eye of the storm": "./images/places/eye-of-storm.webp",
 };
 
 export const monsterImages = {
-  slime: "./images/monsters/slime.jpg",
-  "fanged beast": "./images/monsters/fanged-beast.jpg",
-  dragon: "./images/monsters/dragon.jpg",
-  "skeleton warrior": "./images/monsters/skeleton.jpg",
-  "dark wizard": "./images/monsters/wizard.jpg",
-  "ancient dragon": "./images/monsters/ancient-dragon.jpg",
-  "crystal sentinel": "./images/monsters/crystal-sentinel.jpg",
-  "gem serpent": "./images/monsters/gem-serpent.jpg",
-  "prism leviathan": "./images/monsters/prism-leviathan.jpg",
-  "abyss crab": "./images/monsters/abyss-crab.jpg",
-  "shadow eel": "./images/monsters/shadow-eel.jpg",
-  "kraken of the deep": "./images/monsters/kraken.jpg",
-  "thunder hawk": "./images/monsters/thunder-hawk.jpg",
-  "sky elemental": "./images/monsters/sky-elemental.jpg",
-  "tempest titan": "./images/monsters/tempest-titan.jpg",
+  slime: "./images/monsters/slime.webp",
+  "fanged beast": "./images/monsters/fanged-beast.webp",
+  dragon: "./images/monsters/dragon.webp",
+  "skeleton warrior": "./images/monsters/skeleton.webp",
+  "dark wizard": "./images/monsters/wizard.webp",
+  "ancient dragon": "./images/monsters/ancient-dragon.webp",
+  "crystal sentinel": "./images/monsters/crystal-sentinel.webp",
+  "gem serpent": "./images/monsters/gem-serpent.webp",
+  "prism leviathan": "./images/monsters/prism-leviathan.webp",
+  "abyss crab": "./images/monsters/abyss-crab.webp",
+  "shadow eel": "./images/monsters/shadow-eel.webp",
+  "kraken of the deep": "./images/monsters/kraken.webp",
+  "thunder hawk": "./images/monsters/thunder-hawk.webp",
+  "sky elemental": "./images/monsters/sky-elemental.webp",
+  "tempest titan": "./images/monsters/tempest-titan.webp",
 };
 
 // funciones para guardar y cargar la partida
@@ -280,7 +279,10 @@ export function loadGame() {
 
 // actualización de UI
 export function updateUI() {
-  updateUIUtil(elements, state);
+  elements.xpText.innerText = state.xp;
+  elements.healthText.innerText = state.health;
+  elements.goldText.innerText = state.gold;
+  elements.armorText.innerText = armors[state.armor].defense;
 }
 
 export function restart() {
@@ -304,12 +306,12 @@ export function updateImage(imagePath, altText) {
     elements.sceneImage.alt = altText;
     elements.sceneImage.onerror = () => {
       console.log(`Error loading image: ${imagePath}`);
-      elements.sceneImage.src = "./images/places/town-square.jpg";
+      elements.sceneImage.src = "./images/places/town-square.webp";
       elements.sceneImage.alt = "Image not available";
     };
   } catch (error) {
     console.log("Error handling image:", error);
-    elements.sceneImage.src = "./images/places/town-square.jpg";
+    elements.sceneImage.src = "./images/places/town-square.webp";
     elements.sceneImage.alt = "Error loading image";
   }
 }
