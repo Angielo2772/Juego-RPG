@@ -226,7 +226,7 @@ export const locationImages = {
   store: "./images/places/store.webp",
   cave: "./images/places/cave.webp",
   "dark forest": "./images/places/dark-forest.webp",
-  "forgotten hollow": "./images/places/forgotten-hollow.webp",
+  "the forgotten hollow": "./images/places/forgotten-hollow.webp",
   "crystal caverns": "./images/places/crystal-caverns.webp",
   "the shimmering abyss": "./images/places/shimmering-abyss.webp",
   "abyssal depths": "./images/places/abyssal-depths.webp",

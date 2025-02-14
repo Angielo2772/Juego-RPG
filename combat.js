@@ -101,7 +101,7 @@ export function isMonsterHit() {
 
 export function defeatMonster() {
   const monster = monsters[state.fighting];
-  const goldGained = Math.floor(monster.level * 5.5);
+  const goldGained = Math.floor(monster.level * 6);
   const xpGained = Math.floor(monster.level / 2);
   state.gold += goldGained;
   state.xp += xpGained;

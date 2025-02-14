@@ -1,0 +1,73 @@
+{
+    "title": "Final Hero",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register",
+    "playAsGuest": "Play as guest",
+    "logout": "Logout",
+    "gameAccess": "Game Access",
+    "stats": {
+        "xp": "XP",
+        "health": "Health",
+        "gold": "Gold",
+        "armor": "Armor"
+    },
+    "buttons": {
+        "goToStore": "Go to store",
+        "goToCave": "Go to cave",
+        "fightDragon": "Fight dragon",
+        "attack": "Attack",
+        "dodge": "Dodge",
+        "run": "Run",
+        "buyHealth": "Buy health",
+        "buyWeapon": "Buy weapon",
+        "buyArmor": "Buy armor",
+        "sellWeapon": "Sell weapon",
+        "viewInventory": "View inventory",
+        "goBack": "Go back"
+    },
+    "combat": {
+        "criticalHit": "CRITICAL HIT!",
+        "youHit": "You hit the",
+        "monsterDeals": "The monster deals",
+        "damage": "damage",
+        "youMiss": "You miss!",
+        "youDodge": "You dodge the attack from",
+        "youDie": "You die.",
+        "youWin": "You defeat the FINAL BOSS! YOU WIN THE GAME!"
+    },
+    "locations": {
+        "townSquare": "You are in the town square. You see a sign that says \"Store\".",
+        "store": "You enter the store. What would you like to buy?",
+        "cave": "You enter the cave. You see some monsters.",
+        "fight": "This fight is going to be so EPIC!",
+        "nextLocations": "Next Locations:",
+        "requiredXP": "Required XP:",
+        "darkForest": "Dark Forest",
+        "dragonMountain": "Dragon Mountain",
+        "crystalCaverns": "Crystal Caverns",
+        "shimmeringAbyss": "Shimmering Abyss",
+        "abyssalDepths": "Abyssal Depths",
+        "sunkenTrench": "Sunken Trench",
+        "skywardPeaks": "Skyward Peaks",
+        "eyeOfStorm": "Eye of the Storm"
+    },
+    "shop": {
+        "currentHealth": "Your current health is:",
+        "selectHealing": "Select healing amount:",
+        "notEnoughGold": "You don't have enough gold!",
+        "healedFor": "You have been healed for",
+        "totalHealth": "Your total health is now",
+        "inventory": "Your inventory:",
+        "currentWeapon": "Current weapon:",
+        "nextWeapon": "Next available weapon:",
+        "currentArmor": "Current armor:",
+        "nextArmor": "Next available armor:",
+        "power": "Power",
+        "defense": "Defense",
+        "price": "Price",
+        "description": "Description"
+    }
+}

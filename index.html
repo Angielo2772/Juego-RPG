@@ -8,28 +8,36 @@
 </head>
 
 <body>
+  <script type="module" src="./main.js" defer></script>
+  <div id="language-container">
+    <select id="language-selector" class="language-select">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
+  </div>
+
   <div id="login-container" role="dialog" aria-labelledby="login-title">
     <form id="login-form">
       <h1 id="login-title">Final Hero</h1>
       <fieldset id="form-fields">
-        <legend>Acceso al juego</legend>
+        <legend>Accesss to the Game</legend>
         <div class="input-group">
-          <label for="username">Nombre de usuario</label>
+          <label for="username">Username</label>
           <input type="text" id="username" name="username" required>
         </div>
         <div class="input-group">
-          <label for="email">Correo electrónico</label>
+          <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
         </div>
         <div class="input-group">
-          <label for="password">Contraseña</label>
+          <label for="password">Password</label>
           <input type="password" id="password" name="password" required>
         </div>
       </fieldset>
       <div class="button-group">
-        <button type="submit" id="login-button">Iniciar sesión</button>
-        <button type="button" id="register-button">Registrarse</button>
-        <button type="button" id="guest-button">Jugar como invitado</button>
+        <button type="submit" id="login-button">Login</button>
+        <button type="button" id="register-button">Register</button>
+        <button type="button" id="guest-button">Play as Guest</button>
       </div>
       <p id="error-message" role="alert" aria-live="polite"></p>
     </form>
@@ -40,7 +48,7 @@
       <header>
         <div id="user-info">
           <span id="logged-username"></span>
-          <button id="logout-button" class="logout-btn">Cerrar sesión</button>
+          <button id="logout-button" class="logout-btn">Logout</button>
         </div>
         <ul id="stats" class="stats-list" role="list">
           <li class="stat">XP: <strong><span id="xpText">0</span></strong></li>
@@ -81,7 +89,8 @@
       <img id="scene-image" src="./images/places/town-square.webp" alt="Current Scene">
     </aside>
   </main>
-  <script type="module" src="./main.js"></script>
+  <!-- <script src="./i18next.min.js" async></script>
+  <script src="./i18next-http-backend.min.js"></script> -->
 </body>
 
 </html>

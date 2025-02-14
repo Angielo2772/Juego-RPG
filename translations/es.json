@@ -1,0 +1,73 @@
+{
+    "title": "Héroe Final",
+    "username": "Nombre de usuario",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "playAsGuest": "Jugar como invitado",
+    "logout": "Cerrar sesión",
+    "gameAccess": "Acceso al juego",
+    "stats": {
+        "xp": "EXP",
+        "health": "Salud",
+        "gold": "Oro",
+        "armor": "Armadura"
+    },
+    "buttons": {
+        "goToStore": "Ir a la tienda",
+        "goToCave": "Ir a la cueva",
+        "fightDragon": "Luchar contra dragón",
+        "attack": "Atacar",
+        "dodge": "Esquivar",
+        "run": "Huir",
+        "buyHealth": "Comprar salud",
+        "buyWeapon": "Comprar arma",
+        "buyArmor": "Comprar armadura",
+        "sellWeapon": "Vender arma",
+        "viewInventory": "Ver inventario",
+        "goBack": "Volver"
+    },
+    "combat": {
+        "criticalHit": "¡GOLPE CRÍTICO!",
+        "youHit": "Golpeaste al",
+        "monsterDeals": "El monstruo hace",
+        "damage": "de daño",
+        "youMiss": "¡Fallaste!",
+        "youDodge": "Esquivas el ataque de",
+        "youDie": "Has muerto.",
+        "youWin": "¡Has derrotado al JEFE FINAL! ¡HAS GANADO EL JUEGO!"
+    },
+    "locations": {
+        "townSquare": "Estás en la plaza del pueblo. Ves un cartel que dice \"Tienda\".",
+        "store": "Entras en la tienda. ¿Qué te gustaría comprar?",
+        "cave": "Entras en la cueva. Ves algunos monstruos.",
+        "fight": "¡Esta pelea va a ser ÉPICA!",
+        "nextLocations": "Siguientes Ubicaciones:",
+        "requiredXP": "EXP Requerida:",
+        "darkForest": "Bosque Oscuro",
+        "dragonMountain": "Montaña del Dragón",
+        "crystalCaverns": "Cavernas de Cristal",
+        "shimmeringAbyss": "Abismo Resplandeciente",
+        "abyssalDepths": "Profundidades Abisales",
+        "sunkenTrench": "Fosa Hundida",
+        "skywardPeaks": "Picos Celestiales",
+        "eyeOfStorm": "Ojo de la Tormenta"
+    },
+    "shop": {
+        "currentHealth": "Tu salud actual es:",
+        "selectHealing": "Selecciona cantidad de curación:",
+        "notEnoughGold": "¡No tienes suficiente oro!",
+        "healedFor": "Te has curado",
+        "totalHealth": "Tu salud total ahora es",
+        "inventory": "Tu inventario:",
+        "currentWeapon": "Arma actual:",
+        "nextWeapon": "Siguiente arma disponible:",
+        "currentArmor": "Armadura actual:",
+        "nextArmor": "Siguiente armadura disponible:",
+        "power": "Poder",
+        "defense": "Defensa",
+        "price": "Precio",
+        "description": "Descripción"
+    }
+}

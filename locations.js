@@ -89,7 +89,7 @@ export const locations = [
     text: "You enter the mysterious dark forest. A forest shrouded in ash and thick fog, filled with withered trees and dark paths. Ancient evil creatures await.",
   },
   {
-    name: "The forgotten hollow",
+    name: "the forgotten hollow",
     "button text": [
       "Fight ancient dragon",
       "Fight ancient dragon",
@@ -172,7 +172,7 @@ export const locationRequirements = [
   { name: "Eye of the Storm", xp: 2000 },
 ];
 
-// función para actualizar la guia de ubicaciones
+// función para actualizar la lista de ubicaciones
 export function updateLocationsList() {
   const locationsList = document.querySelector("#locations-list");
   locationsList.innerHTML = "";
@@ -201,7 +201,7 @@ export function update(location) {
 }
 
 function setupButtons(location) {
-  // configurar botones principales
+  // botones principales
   for (let i = 0; i < 3; i++) {
     setupButton(
       elements[`button${i + 1}`],
@@ -210,7 +210,7 @@ function setupButtons(location) {
     );
   }
 
-  // configurar botones adicionales
+  // botones adicionales
   setupButton(
     elements.button4,
     location["button text"][3],
@@ -239,13 +239,12 @@ export function goTown() {
 
 function updateButtons() {
   if (state.xp >= 150) {
-    // actualizar todos los valores aquí también
     elements.button2.innerText = "Go to dark forest";
     elements.button2.onclick = goDarkForest;
   }
   if (state.xp >= 300) {
-    elements.button3.innerText = "Go to dragon mountain";
-    elements.button3.onclick = goDragonMountain;
+    elements.button3.innerText = "Go to forgotten hollow";
+    elements.button3.onclick = goForgottenHollow;
   }
   if (state.xp >= 500) {
     elements.button2.innerText = "Go to crystal caverns";
@@ -401,7 +400,7 @@ export function goDarkForest() {
   update(locations[8]);
 }
 
-export function goDragonMountain() {
+export function goForgottenHollow() {
   update(locations[9]);
 }
 
